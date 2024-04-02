@@ -3,35 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <title>Animal Placement Bureau | A non-profit dog rescue</title>
+    <link rel="stylesheet" href="../../../static/css/navbar.css"> 
   </head>
   <body>
     <!-- The header  -->
-    <header class="banner">
+    <header>
     </header>
 
     <!-- The navigation bar -->
     <nav class="nav">
+      <div class="navbar-left"> 
+        <p class="logo"> <h1>Animal Placement Bureau</h1></p>
+      </div>
+      <div class="navbar-right">
+          <ul class="navbar-items" id="navbar-items">
+              <li> <a class="navbar-link" href="../about-us">About Us</a></li>
+              <li> <a class="navbar-link" href="../adopt-a-dog">Adopt a Dog</a></li>
+              <li> <a class="navbar-link" href="../volunteer">Volunteer</a></li>
+              <li> <a class="navbar-link" href="../support-us">Support Us</a></li>
+              <li> <a class="navbar-link" href="../help-for-dog-owners">Help for Dog Owners</a></li>
+              <li> <a class="navbar-link" href="../media-gallery">Media Gallery</a></li>
+          </ul>
+      </div>
     </nav>
 
     <!-- The main content  -->
     <main class="main">
+      <!-- below demonstrates how to display elements from a database model - 
+        see the index function in views.py, and from there the relevant database model in 
+        models.py for more detail -->
+      {% if options %}
+          <ul>
+          {% for option in options %}
+              <li><a href="/options/{{ option.option_id }}/">{{ option.option_name }}</a></li>
+          {% endfor %}
+          </ul>
+      {% else %}
+          <p>No options are available.</p>
+      {% endif %}
+
     </main>
 
     <!-- The footer of the file -->
     <footer>
     </footer>
 
-    <!-- below demonstrates how to display elements from a database model - 
-         see the index function in views.py, and from there the relevant database model in 
-         models.py for more detail -->
-    {% if options %}
-        <ul>
-        {% for option in options %}
-            <li><a href="/options/{{ option.option_id }}/">{{ option.option_name }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No options are available.</p>
-    {% endif %}
   </body>
 </html>
