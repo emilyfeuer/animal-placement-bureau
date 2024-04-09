@@ -24,7 +24,7 @@ class WpActionschedulerActions(models.Model):
     extended_args = models.CharField(max_length=8000, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'wp_actionscheduler_actions'
 
 
@@ -347,6 +347,8 @@ class WpOptions(models.Model):
         managed = False
         db_table = 'wp_options'
 
+    def __str__(self):
+        return self.option_name
 
 class WpPostmeta(models.Model):
     meta_id = models.BigAutoField(primary_key=True)

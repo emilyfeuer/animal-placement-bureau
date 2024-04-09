@@ -2,9 +2,108 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>Animal Placement Bureau | A non-profit dog rescue</title>
+    <title>Animal Placement Bureau</title>
+    <link rel="stylesheet" href="../../static/pages/css/animal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/gif" href="apb_logotype-new.gif">
+    <script src="https://kit.fontawesome.com/c0112659ec.js" crossorigin="anonymous"></script>  -->
   </head>
   <body>
-    <p>This is the Animal Placement Bureau index.</p>
+    <!-- The header  -->
+    <header>
+    </header>
+
+    <!-- The navigation bar -->
+    <nav class="navbar">
+      <!-- <div class="navbar-left"> 
+        <p class="logo"> <h1>Animal Placement Bureau</h1></p>
+      </div>
+      <div class="navbar-right">
+          <ul class="navbar-items" id="navbar-items">
+              <li> <a class="navbar-link" href="../about-us">About Us</a></li>
+              <li> <a class="navbar-link" href="../adopt-a-dog">Adopt a Dog</a></li>
+              <li> <a class="navbar-link" href="../volunteer">Volunteer</a></li>
+              <li> <a class="navbar-link" href="../support-us">Support Us</a></li>
+              <li> <a class="navbar-link" href="../help-for-dog-owners">Help for Dog Owners</a></li>
+              <li> <a class="navbar-link" href="../media-gallery">Media Gallery</a></li>
+          </ul>
+      </div> -->
+      <img src="apb_logotype-new.gif" alt="APB Logo" class="logo">
+      
+      <div class="dropdown">
+        <button class="dropbtn">Services</button>
+        <div class="dropdown-content">
+          <a href="#">Service 1</a>
+          <a href="#">Service 2</a>
+          <a href="#">Service 3</a>
+        </div>
+      </div>
+      <a href="#">Contact</a>
+
+      <a href="./gallery.html">Gallery</a>
+      <a href="./about.html">About</a>
+      <a href="./index.html">Home</a>
+    </nav>
+
+      <!-- Container with background image and text -->
+      <div class="container">
+        <div class="background-img"></div>
+        <div class="text">
+          <h1>Animal Placement Bureau</h1>
+      
+        </div>
+      </div>
+
+      <!-- Upcoming Events Section -->
+      <section class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        
+        <!-- Event Card 1 -->
+        <div class="event-card">
+          <h3 class="event-title">Event Title 1</h3>
+          <p class="event-date">Date</p>
+          <p class="event-description">some text.</p>
+        </div>
+        
+        <!-- Event Card 2 -->
+        <div class="event-card">
+          <h3 class="event-title">Event Title 2</h3>
+          <p class="event-date">Date</p>
+          <p class="event-description">some text</p>
+        </div>
+        
+        <!-- Event Card 3 -->
+        <div class="event-card">
+          <h3 class="event-title">Event Title 3</h3>
+          <p class="event-date">Date</p>
+          <p class="event-description">some text</p>
+        </div>
+      </section>
+
+    <!-- The main content  -->
+    <main class="main">
+      <!-- below demonstrates how to display elements from a database model - 
+        see the index function in views.py, and from there the relevant database model in 
+        models.py for more detail -->
+      <!-- {% if options %}
+          <ul>
+          {% for option in options %}
+              <li><a href="/options/{{ option.option_id }}/">{{ option.option_name }}</a></li>
+          {% endfor %}
+          </ul>
+      {% else %}
+          <p>No options are available.</p>
+      {% endif %} -->
+
+    </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Animal Placement Bureau 2024.</p>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+  </footer>
+
   </body>
 </html>
