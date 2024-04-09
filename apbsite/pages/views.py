@@ -10,6 +10,12 @@ def index(request):
     context = {"options": options,}
     return render(request, "pages/index.html", context)
 
+def about(request):
+    return render(request, "pages/about.html")
+
+def gallery(request):
+    return render(request, "pages/gallery.html")
+
 
 # def index(request):
 #     options_list = WpOptions.objects.order_by("option_id")[:5]
